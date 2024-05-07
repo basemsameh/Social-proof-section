@@ -1,0 +1,293 @@
+:root {
+    /* Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: 
+    "vocab"
+    "star-1"
+    "star-2"
+    "star-3"
+    "colton"
+    "irene"
+    "anne";
+    gap: 20px 0;
+    position: relative;
+}
+
+.container div {
+    padding: 10px 0 0 10px;
+}
+
+/* Vocab */
+.container .vocab {
+    grid-area: vocab;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container .vocab h1 {
+    color: var(--Very-Dark-Magenta);
+}
+
+.container .vocab p {
+    color: var(--Very-Dark-Magenta);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* Stars */
+.star-1,
+.star-2,
+.star-3 {
+    margin: 0 auto;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+}
+
+.container .star-1 img,
+.container .star-2 img,
+.container .star-3 img {
+    padding-left: 10px;
+}
+
+.container .star-1 p,
+.container .star-2 p,
+.container .star-3 p {
+    color: var(--Very-Dark-Magenta);
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Star-1 */
+.container .star-1 {
+    grid-area: star-1;
+}
+
+/* Star-2 */
+.container .star-2 {
+    grid-area: star-2;
+}
+
+/* Star-3 */
+.container .star-3 {
+    grid-area: star-3;
+    margin-bottom: 30px;
+}
+
+/* Persons */
+.container .colton,
+.container .irene,
+.container .anne {
+    padding: 20px 20px 0 20px;
+    border-radius: 10px;
+    background-color: var(--Very-Dark-Magenta);
+    width: 85%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.container .colton img,
+.container .irene img,
+.container .anne img {
+    border-radius: 50%;
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.container .colton p:last-of-type,
+.container .irene p:last-of-type,
+.container .anne p:last-of-type {
+    color: var(--White);
+    line-height: 25px;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-top: 50px;
+}
+
+/* Colton */
+.container .colton {
+    grid-area: colton;
+}
+
+.container .colton p:first-of-type {
+    color: var(--White);
+    font-weight: bold;
+    width: fit-content;
+    margin-left: 80px;
+    margin-top: -45px;
+    position: relative;
+}
+
+.container .colton p:first-of-type::after {
+    content: "Verified Buyer";
+    position: absolute;
+    color: var(--Soft-Pink);
+    top: 25px;
+    left: 0;
+    width: 100px;
+}
+
+/* Irene */
+.container .irene {
+    grid-area: irene;
+}
+
+.container .irene p:first-of-type {
+    color: var(--White);
+    font-weight: bold;
+    width: fit-content;
+    margin-left: 80px;
+    margin-top: -45px;
+    position: relative;
+}
+
+.container .irene p:first-of-type::after {
+    content: "Verified Buyer";
+    position: absolute;
+    color: var(--Soft-Pink);
+    top: 25px;
+    left: 0;
+    width: 100px;
+}
+
+/* Anne */
+.container .anne {
+    grid-area: anne;
+}
+
+.container .anne p:first-of-type {
+    color: var(--White);
+    font-weight: bold;
+    width: fit-content;
+    margin-left: 80px;
+    margin-top: -45px;
+    position: relative;
+}
+
+.container .anne p:first-of-type::after {
+    content: "Verified Buyer";
+    position: absolute;
+    color: var(--Soft-Pink);
+    top: 25px;
+    left: 0;
+    width: 100px;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        height: 90vh;
+    }
+    
+    .container div {
+        position: absolute;
+    }
+
+    .container .vocab {
+        width: 35%;
+        height: 250px;
+        margin: 0;
+    }
+
+    .container .vocab h1 {
+        padding-right: 10px;
+        font-size: 45px;
+    }
+
+    .container .vocab p {
+        padding-right: 10px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+
+    .container .star-1,
+    .container .star-2,
+    .container .star-3 {
+        width: 39%;
+        height: 45px;
+        right: 10px;
+    }
+
+    .container .star-1 img,
+    .container .star-2 img,
+    .container .star-3 img {
+        margin-bottom: 6px;
+    }
+
+    .container .star-1 p,
+    .container .star-2 p,
+    .container .star-3 p {
+        width: fit-content;
+        padding-left: 30px;
+        margin-right: 20px;
+    }
+
+    .container .star-1 {
+        top: -60%;
+        right: 120px;
+    }
+
+    .container .star-2 {
+        top: -80%;
+        right: 60px;
+    }
+
+    .container .star-3 {
+        top: -95%;
+    }
+
+    .container .colton,
+    .container .irene,
+    .container .anne {
+        width: 28%;
+        height: 200px;    
+    }
+
+    .container .colton {
+        left: 10px;
+        bottom: -140%;
+    }
+
+    .container .irene {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -40%;
+    }
+
+    .container .anne {
+        right: 10px;
+        bottom: 55%;
+    }
+}
+
+@media (min-width: 1160px) {
+    .container {
+        width: 1160px;
+    }
+}
